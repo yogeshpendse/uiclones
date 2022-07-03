@@ -1,0 +1,289 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+:root {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  --primary: rgb(29, 155, 240);
+  --text-light: white;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* max-width: 60rem; */
+.navsection {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navsection_link {
+  text-decoration: none;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  font-size: 2rem;
+  max-width: fit-content;
+  font-weight: 600;
+}
+.navsection_link--light {
+  box-shadow: 0 0 0 0.1rem rgb(207, 217, 222);
+  color: var(--primary);
+}
+.navsection_link--primary {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+.navsection-links {
+  display: flex;
+  justify-content: space-around;
+}
+.navsection {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.navbar__logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.navbar__setting {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.navbar__search {
+  border-radius: 2rem;
+  border: none;
+  background-color: rgb(185, 202, 211);
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  width: 70%;
+}
+.bannersection {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bannersection__desc {
+  position: relative;
+  padding: 1.5rem;
+}
+.bannersection__wallimage {
+  width: 100%;
+}
+.bannersection__name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  margin-top: 5rem;
+}
+.bannersection__username {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.bannersection__bio {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+.bannersection__otherdetails {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.bannersection__followdata {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+.follow-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-weight: 700;
+}
+.bannersection__profile {
+  width: 100%;
+}
+.bannersection__profilecont {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 8rem;
+  position: absolute;
+  top: -20%;
+  z-index: 2;
+}
+.optiontab {
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.optiontab__option {
+  font-size: 1.6rem;
+  padding: 0 0.2rem 2rem;
+}
+.optiontab__option--selected {
+  border-bottom: 0.3rem solid rgb(29, 155, 240);
+}
+.tweetsection {
+  padding: 0 1rem;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tweetsection__image {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 60rem;
+}
+.tweetsection__imagecont {
+  max-width: 5rem;
+  padding: 0.2rem;
+}
+.tweetsection__tweet {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+.tweetsection__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.tweetsection__tweettop {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.tweetsection__username {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+.tweetsection__name {
+  font-size: 1.4rem;
+}
+.tweetsection__date {
+  font-size: 1.4rem;
+}
+.tweetsection__tweetbottom {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.tweetsection__tweetoption {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+.tweetsection__use {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.tweetsection__tweet {
+  box-shadow: 0 0.15rem 0 black;
+}
+.leftarea {
+  display: none;
+}
+.rightarea {
+  display: none;
+}
+.parentconatiner {
+  margin-left: auto;
+  margin-right: auto;
+}
+.bannersection__topsec {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .parentconatiner {
+    display: grid;
+    grid-template-areas:
+      "leftarea feedarea rightarea"
+      "leftarea feedarea rightarea"
+      "leftarea feedarea rightarea";
+    max-width: 1250px;
+  }
+  .leftarea {
+    grid-area: leftarea;
+    display: flex;
+    flex-direction: column;
+  }
+  .feedarea {
+    grid-area: feedarea;
+  }
+  .rightarea {
+    grid-area: rightarea;
+    display: block;
+  }
+  .backhome {
+    color: var(--primary);
+    font-size: 4rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .sidenav {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+  .sidenav__item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .list {
+    margin-top: 6rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .list__item {
+    font-size: 1.8rem;
+  }
+  .bannersection__topsec {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+  .bannersection__topsecback {
+    font-size: 3rem;
+  }
+  .bannersection__topsecname {
+    font-size: 3rem;
+    flex-grow: 1;
+  }
+  .navsection {
+    display: none;
+  }
+}
